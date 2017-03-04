@@ -1,0 +1,42 @@
+<!--
+  Generated template for the Upload page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Upload</ion-title>
+    <button id="right" class="morecolor" ion-button clear ion-right style="margin-top: 20px;" (click)="Modal()">
+      <ion-icon name="more"></ion-icon>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+	
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<img src="../assets/images/cabbage.png" height="70px" width="70px"/>
+		</ion-item>
+		<ion-item>
+			<ion-label stacked>File Upload</ion-label>
+			<ion-input type="text" placeholder ="Description" [(ngModel)]="this.data.recipethumb"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label stacked>Recipe Name</ion-label>
+			<ion-input type="text" placeholder ="Chixilog" [(ngModel)]="this.data.recipename"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label stacked>Description</ion-label>
+			<ion-input type="text" placeholder ="Description" [(ngModel)]="this.data.recipedesc"></ion-input>
+		</ion-item>
+		<ion-item>
+			<button id="right" ion-button clear ion-right (click)="submit()">
+					<ion-icon name="add"></ion-icon>
+			</button>
+		</ion-item>
+	</ion-list>
+</ion-content>

@@ -1,0 +1,66 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Profile</ion-title>
+    <button id="right"  class="morecolor" ion-button clear ion-right style="margin-top: 20px;" (click)="Modal()">
+      <ion-icon name="more"></ion-icon>
+    </button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list *ngFor="let user of data" no-lines>
+        <ion-item text-center>
+            <ion-thumbnail><img src="assets/images/deguzman.jpg"></ion-thumbnail>
+        </ion-item>
+        <ion-item text-center>
+            <ion-label>Hi! User!</ion-label>
+        </ion-item>
+        <ion-item>
+            Username: {{user.userName}}
+        </ion-item>
+        <ion-item>
+            First Name: {{user.userFirstName}}
+        </ion-item>
+        <ion-item>
+            Middle Name: {{user.userMiddleName}}
+        </ion-item>
+        <ion-item>
+            Last Name: {{user.userLastName}}
+        </ion-item>
+        <ion-item>
+            Email Address: {{user.userEmail}}
+        </ion-item>
+        <ion-item>
+            Contact: {{user.userContact}}
+        </ion-item>
+        <ion-item>
+            Bio: {{user.userBio}}
+        </ion-item>
+        <ion-item>
+            BirthDate: {{user.userBirth}}
+        </ion-item>
+        <ion-item>
+            Gender: {{user.userGender}}
+        </ion-item>
+    </ion-list>
+
+    <ion-segment [(ngModel)]="info">
+        <ion-segment-button value="customer">
+            Customer Details
+        </ion-segment-button>
+        <ion-segment-button value="vehicle">
+            Vehicle Details
+        </ion-segment-button>
+        <ion-segment-button value="inspection">
+            Inspection Details
+        </ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="info">
+        <ion-list *ngSwitchCase="'customer'">
+        </ion-list>
+        <ion-list *ngSwitchCase="'vehicle'">
+        </ion-list>
+    </div>
+</ion-content>

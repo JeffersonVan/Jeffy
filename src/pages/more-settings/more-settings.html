@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+  	<button id="left" class="morecolor" ion-button ion-left clear style="margin-top: 21px;"(click)="Modal()">
+      <p>Cancel</p>
+    </button>
+    <ion-title id="title" >moreSettings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list no-lines>
+	    <ion-item>
+	    	<ion-icon name="ios-share"></ion-icon>
+	    	<button ion-button clear>
+	    	<label>Share</label>
+	    	</button>
+	   	</ion-item>
+	   	<ion-item>
+	    	<ion-icon name="ios-help"></ion-icon>
+	    	<button ion-button clear>
+	    	<label>Help</label>
+	    	</button>
+	   	</ion-item>
+	   	<ion-item>
+	    	<ion-icon name="ios-information-circle"></ion-icon>
+	    	<button ion-button clear>
+	    	<label>About</label>
+	    	</button>
+	   	</ion-item>
+	   	<ion-item>
+	    	<ion-icon name="ios-settings"></ion-icon>
+	    	<button ion-button clear>
+	    	<label>Settings</label>
+	    	</button>
+	   	</ion-item>
+	   	<ion-item>
+	    	<ion-icon name="ios-log-out"></ion-icon>
+	    	<button ion-button clear (click)="Out()">
+	    	<label>Logout</label>
+	    	</button>
+	   	</ion-item>
+	</ion-list>
+
+</ion-content>
