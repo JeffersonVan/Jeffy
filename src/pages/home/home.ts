@@ -12,6 +12,7 @@ import {Http} from '@angular/http';
 })
 export class HomePage {
   data : any; 
+  recipes : any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public actionSheetCtrl: ActionSheetController, private recipe: Recipeprovider, private http:Http) {
   this.data = {}; 
   }
@@ -23,9 +24,9 @@ ngOnInit(){
  
 getRecipes()
 {
-  this.recipe.getRecipe().subscribe(res=>{
+  this.recipe.getRecipe2().subscribe(res=>{
       this.data = res
-      console.log(this.data);
+      this.recipes = this.data;
     });
 }
 
@@ -36,9 +37,10 @@ getRecipes()
   	modal.present();
   	}
 
-view(name: string){
-  let recipe =  this.data.recipeid;
-  this.navCtrl.push(AboutPage, {name: 'Jeff'});
+view(id,name,desc,username){
+  console.log(id);
+  console.log(name);
+  this.navCtrl.push(AboutPage ,{id,name,desc,username});
 } 
 
  }

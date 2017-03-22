@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>info</ion-title>
+    <ion-title>Preview of Recipe</ion-title>
     <button id="right" class="morecolor" ion-button clear ion-right style="margin-top: 20px;" (click)="Modal()">
       <ion-icon name="more"></ion-icon>
     </button>
@@ -17,7 +17,10 @@
 
 
 <ion-content padding>
-	<ion-list no-lines *ngFor="let user of data">
+	<ion-list no-lines *ngFor="let user of fetchdata">
+		<ion-item item-center>
+			RECIPE NAME: {{user.recipeName}}
+		</ion-item>
 		<ion-item>
 			<ion-label class="titles" id="titleing">Ingredients</ion-label>
 		</ion-item>
@@ -37,7 +40,7 @@
 		</ion-item>
 	</ion-list>
 
-	<ion-list no-lines *ngFor="let step of datasteps">
+	<ion-list no-lines *ngFor="let step of fetchdata2">
 		<ion-item text-center >
 				Steps
 		</ion-item>

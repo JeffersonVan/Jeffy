@@ -16,7 +16,11 @@ export class Recipeprovider {
   }
 
     getRecipe(){
-  	return this.http.get('http://localhost/mobAppProj/viewrecipe.php').map(res => res.json());
+  	return this.http.get('http://localhost/mobAppProj/viewrecipeor.php').map(res => res.json());
+  }
+
+  getRecipe2(){
+    return this.http.get('http://localhost/mobAppProj/viewrecipe2.php').map(res => res.json());
   }
 
   searchRecipe(post){

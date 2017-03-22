@@ -1,4 +1,4 @@
-
+s
 
 <ion-header>
   <ion-navbar color="primary">
@@ -18,30 +18,15 @@
         </ion-item>
       </ion-list>
 
-        <ion-list>
+        <ion-list *ngFor = "let recipe of recipes">
           <ion-item>
             <ion-thumbnail item-left>
               <img src="assets/images/cake.png">
             </ion-thumbnail>
-            <p>Food Description</p>
-            <button ion-button clear item-right (click)="view()">View</button>
+            <p>{{recipe.recipeName}}</p>
+            <button ion-button clear item-right (click)="view(recipe.recipeId,recipe.recipeName,recipe.recipeDesc,recipe.userName)">View</button>
           </ion-item>
 
-          <ion-item>
-            <ion-thumbnail item-left>
-              <img src="assets/images/doughnut.png">
-            </ion-thumbnail>
-            <p>Food Description</p>
-            <button ion-button clear item-right (click)="view()">View</button>
-          </ion-item>
-
-          <ion-item>
-            <ion-thumbnail item-left>
-              <img src="assets/images/pizza.png">
-            </ion-thumbnail>
-            <p>Food Description</p>
-            <button ion-button clear item-right (click)="view()">View</button>
-          </ion-item>
         </ion-list>
 
 </ion-content>

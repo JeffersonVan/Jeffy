@@ -23,7 +23,8 @@ import { EdituserPage } from '../pages/edituser/edituser';
 import { EditrecipePage } from '../pages/editrecipe/editrecipe';
 import { EditstepsPage } from '../pages/editsteps/editsteps';
 import { Authuser } from '../providers/authuser';
-
+import { UserPage } from '../pages/user/user';
+import { ViewuserPage } from '../pages/viewuser/viewuser';
  
 @NgModule({
   declarations: [
@@ -43,6 +44,8 @@ import { Authuser } from '../providers/authuser';
     EdituserPage,
     EditrecipePage,
     EditstepsPage,
+    UserPage,
+    ViewuserPage,
     TabsPage
   ],
   imports: [
@@ -66,6 +69,8 @@ import { Authuser } from '../providers/authuser';
     EdituserPage,
     EditrecipePage,
     EditstepsPage,
+    UserPage,
+    ViewuserPage,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Recipeprovider,Userprovider,Ingredientprovide,Steps,Pinned,Authuser],

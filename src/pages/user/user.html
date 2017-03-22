@@ -1,0 +1,33 @@
+<!--
+  Generated template for the User page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Users</ion-title>
+    <button id="right" class="morecolor" ion-button clear ion-right style="margin-top: 20px;" (click)="Modal()">
+      <ion-icon name="more"></ion-icon>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card>
+	  <ion-card-header>
+	    Follow People to get recipe's.
+	  </ion-card-header>
+
+	  <ion-list *ngFor="let user of fetchdata">
+	    <button ion-item (click)="View(user.userId)">
+	      <ion-icon name="contact" item-left></ion-icon>
+	       {{user.userFirstName}}  {{user.userLastName}}
+	    </button>
+	   </ion-list>
+    </ion-card>
+
+</ion-content>
