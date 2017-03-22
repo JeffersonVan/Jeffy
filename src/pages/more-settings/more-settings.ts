@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { StartPage } from '../start/start';
+import { Authuser } from '../../providers/authuser';
+
 
 /*
   Generated class for the MoreSettings page.
@@ -15,7 +17,7 @@ import { StartPage } from '../start/start';
 })
 export class MoreSettingsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, private auth: Authuser) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MoreSettingsPage');
@@ -27,6 +29,7 @@ export class MoreSettingsPage {
 
 Out()
 {
+  localStorage.clear();
   this.navCtrl.push(StartPage);
 }
 

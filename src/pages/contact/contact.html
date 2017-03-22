@@ -10,57 +10,84 @@
 
 
 <ion-content padding>
-    <ion-list *ngFor="let user of data" no-lines>
-        <ion-item text-center>
-            <ion-thumbnail><img src="assets/images/deguzman.jpg"></ion-thumbnail>
-        </ion-item>
-        <ion-item text-center>
-            <ion-label>Hi! User!</ion-label>
-        </ion-item>
-        <ion-item>
-            Username: {{user.userName}}
-        </ion-item>
-        <ion-item>
-            First Name: {{user.userFirstName}}
-        </ion-item>
-        <ion-item>
-            Middle Name: {{user.userMiddleName}}
-        </ion-item>
-        <ion-item>
-            Last Name: {{user.userLastName}}
-        </ion-item>
-        <ion-item>
-            Email Address: {{user.userEmail}}
-        </ion-item>
-        <ion-item>
-            Contact: {{user.userContact}}
-        </ion-item>
-        <ion-item>
-            Bio: {{user.userBio}}
-        </ion-item>
-        <ion-item>
-            BirthDate: {{user.userBirth}}
-        </ion-item>
-        <ion-item>
-            Gender: {{user.userGender}}
-        </ion-item>
-    </ion-list>
-
-    <ion-segment [(ngModel)]="info">
-        <ion-segment-button value="customer">
-            Customer Details
+    
+    <ion-segment [(ngModel)]="info" id="segment1">
+        <ion-segment-button value="profile">
+           <ion-icon name="contact" color="dark"></ion-icon>
         </ion-segment-button>
-        <ion-segment-button value="vehicle">
-            Vehicle Details
+        <ion-segment-button value="favorites">
+            <ion-icon name="bookmark" color="dark"></ion-icon>
         </ion-segment-button>
-        <ion-segment-button value="inspection">
-            Inspection Details
+        <ion-segment-button value="followers">
+            <ion-icon name="people" color="dark"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="Following">
+            <ion-icon name="person-add" color="dark"></ion-icon>
         </ion-segment-button>
     </ion-segment>
     <div [ngSwitch]="info">
-        <ion-list *ngSwitchCase="'customer'">
+        <ion-list *ngSwitchCase="'profile'">
+            <ion-list *ngFor="let user of data" no-lines>
+                <ion-item text-center>
+                    <ion-thumbnail><img src="assets/images/deguzman.jpg"></ion-thumbnail>
+                </ion-item>
+                <ion-item text-center>
+                    <ion-label>Hi! User!</ion-label>
+                </ion-item>
+                <ion-item>
+                    Username: {{username}}
+                </ion-item>
+                <ion-item>
+                    First Name: {{firstname}}
+                </ion-item>
+                <ion-item>
+                    Middle Name: {{middlename}}
+                </ion-item>
+                <ion-item>
+                    Last Name: {{lastname}}
+                </ion-item>
+                <ion-item>
+                    Email Address: {{email}}
+                </ion-item>
+                <ion-item>
+                    Contact: {{contact}}
+                </ion-item>
+                <ion-item>
+                    Bio: {{bio}}
+                </ion-item>
+                <ion-item>
+                    BirthDate: {{birth}}
+                </ion-item>
+                <ion-item>
+                    Gender: {{gender}}
+                </ion-item>
+                <ion-item item-right>
+                    <button ion-button clear large item-right (click)="editUser()">
+                        <ion-icon name="brush"></ion-icon>
+                    </button>
+                </ion-item>
+            </ion-list>
         </ion-list>
-        <ion-list *ngSwitchCase="'vehicle'">
+        <ion-list *ngSwitchCase="'favorites'">
+            <ion-list no-lines *ngFor="let pin of fetchdata">
+                <ion-item>
+                    Recipe : {{pin.recipeName}}
+                </ion-item>
+            </ion-list>
+        </ion-list>
+        <ion-list *ngSwitchCase="'followers'">
+            <ion-card (tap)="tapEvent($event)">
+              <ion-item>
+                    Followers: {{tap}}
+              </ion-item>
+            </ion-card>
+        </ion-list>
+        <ion-list *ngSwitchCase="'following'">
+            <ion-card (tap)="tapEvent($event)">
+              <ion-item>
+                    Following: {{tap}}
+              </ion-item>
+            </ion-card>
         </ion-list>
     </div>
 </ion-content>

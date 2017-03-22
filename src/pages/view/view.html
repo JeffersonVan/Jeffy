@@ -19,7 +19,7 @@
 <ion-content padding>
 	<ion-list no-lines *ngFor="let user of data">
 		<ion-item>
-			<ion-label class="title">Ingredients</ion-label>
+			<ion-label class="titles" id="titleing">Ingredients</ion-label>
 		</ion-item>
 		<ion-item text-center>
 			<button ion-button clear large (click) = "actionSheet()">
@@ -36,5 +36,15 @@
 			{{user.ingQty}}
 		</ion-item>
 	</ion-list>
+
+	<ion-list no-lines *ngFor="let step of datasteps">
+		<ion-item text-center >
+				Steps
+		</ion-item>
+		<ion-item>
+				{{step.stepDesc}}
+		</ion-item>
+	</ion-list>
+
 
 </ion-content>

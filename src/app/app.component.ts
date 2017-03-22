@@ -5,12 +5,16 @@ import { StartPage } from '../pages/start/start';
 import { TabsPage } from '../pages/tabs/tabs';
 import { RegisterPage } from '../pages/register/register';
 import { LoginPage } from '../pages/login/login';
+import { IngredientsAddPage } from '../pages/ingredients-add/ingredients-add';
+import { EdituserPage } from '../pages/edituser/edituser';
+import { EditrecipePage } from '../pages/editrecipe/editrecipe';
+import { EditstepsPage } from '../pages/editsteps/editsteps';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = TabsPage ;
+  rootPage = TabsPage;
   
 
   constructor(platform: Platform) {

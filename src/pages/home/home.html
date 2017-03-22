@@ -11,51 +11,37 @@
 
 <ion-content padding>
 
+
       <ion-list>
         <ion-item>
-  		    <ion-label id="titless">DESSERTS</ion-label>
+  		    <ion-label id="titless">RECIPE'S</ion-label>
         </ion-item>
       </ion-list>
 
-  		<ion-grid>
-  			<ion-row>
-  				<ion-col width-50>
-      					<button ion-button large clear class="food" (click)="view()">
-      						<img src="assets/images/cake.png" height="50px" width="140px"/>
-      					</button>
-  				</ion-col>
-  				<ion-col>
-  					Food Description
-  				</ion-col>
-  			</ion-row>
-  	
-  
-  	
-  			<ion-row>
-  				<ion-col width-50>
-  					<button ion-button large clear class="food" (click)="view()">
-  						<img src="assets/images/doughnut.png" height="50px" width="140px"/>
-  					</button>
-  				</ion-col>
-  				<ion-col>
-  					Food Description
-  				</ion-col>
-  			</ion-row>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail item-left>
+              <img src="assets/images/cake.png">
+            </ion-thumbnail>
+            <p>Food Description</p>
+            <button ion-button clear item-right (click)="view()">View</button>
+          </ion-item>
 
+          <ion-item>
+            <ion-thumbnail item-left>
+              <img src="assets/images/doughnut.png">
+            </ion-thumbnail>
+            <p>Food Description</p>
+            <button ion-button clear item-right (click)="view()">View</button>
+          </ion-item>
 
-          <ion-row>
-          <ion-col width-50>
-            <button ion-button large  clear class="food" (click)="view()">
-              <img src="assets/images/pizza.png" height="50px" width="140px"/>
-            </button>
-          </ion-col>
-          <ion-col>
-            Food Description
-          </ion-col>
-        </ion-row>
-
-  		</ion-grid>
-  
-
+          <ion-item>
+            <ion-thumbnail item-left>
+              <img src="assets/images/pizza.png">
+            </ion-thumbnail>
+            <p>Food Description</p>
+            <button ion-button clear item-right (click)="view()">View</button>
+          </ion-item>
+        </ion-list>
 
 </ion-content>

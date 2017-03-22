@@ -1,0 +1,48 @@
+<!--
+  Generated template for the IngredientsAdd page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Add</ion-title>
+    <button id="right" class="morecolor" ion-button clear ion-right style="margin-top: 20px;" (click)="Modal()">
+      <ion-icon name="more"></ion-icon>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-list no-lines>
+		<ion-item>
+			<ion-label stacked>Ingredients Name</ion-label>
+			<ion-input type="text" placeholder="KANGKONG" [(ngModel)]="data.ingredients"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label stacked>Ingredients Description</ion-label>
+			<ion-input type="text" placeholder="Green Veggie" [(ngModel)]="data.description"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label stacked>Quantity</ion-label>
+			<ion-input type="text" placeholder="11" [(ngModel)]="data.qty"></ion-input>
+		</ion-item>
+	</ion-list>
+
+	<ion-list no-lines>
+		<ion-item>
+			<ion-label id="title2s">Steps</ion-label>
+		</ion-item>
+		<ion-item>
+			<ion-label stacked>Description</ion-label>
+			<ion-textarea placeholder="1.Chop  2.Mince  3.Bite" [(ngModel)]="data.steps"></ion-textarea>
+		</ion-item>
+	</ion-list> 
+
+	<button ion-button ion-right large id="right" clear (click)="stepsAdd()">
+			<ion-icon name="checkmark-circle-outline"></ion-icon>
+	</button>
+</ion-content>

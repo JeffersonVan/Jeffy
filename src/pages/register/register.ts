@@ -70,9 +70,5 @@ cancel()
   this.navCtrl.push(StartPage);
 }
 
- /* genderChange(){
-    this.data.plate = this.select.plate; 
-    var gender = document.getElementById("gender");
-    gender.innerHTML = "";
-  } */
+
 }

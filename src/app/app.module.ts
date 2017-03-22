@@ -15,10 +15,16 @@ import { RegisterPage } from '../pages/register/register';
 import { Userprovider } from '../providers/userprovider';
 import { Recipeprovider } from '../providers/recipeprovider';
 import { Ingredientprovide } from '../providers/ingredientprovider';
+import { IngredientsAddPage } from '../pages/ingredients-add/ingredients-add';
+import { RemarksPage } from '../pages/remarks/remarks';
+import { Steps } from '../providers/steps';  
+import { Pinned } from '../providers/pinned';
+import { EdituserPage } from '../pages/edituser/edituser';
+import { EditrecipePage } from '../pages/editrecipe/editrecipe';
+import { EditstepsPage } from '../pages/editsteps/editsteps';
+import { Authuser } from '../providers/authuser';
 
-
-  
-
+ 
 @NgModule({
   declarations: [
     MyApp,
@@ -32,6 +38,11 @@ import { Ingredientprovide } from '../providers/ingredientprovider';
     ViewPage,
     StartPage,
     RegisterPage,
+    IngredientsAddPage,
+    RemarksPage,
+    EdituserPage,
+    EditrecipePage,
+    EditstepsPage,
     TabsPage
   ],
   imports: [
@@ -50,8 +61,14 @@ import { Ingredientprovide } from '../providers/ingredientprovider';
     ViewPage,
     StartPage,
     RegisterPage,
+    IngredientsAddPage,
+    RemarksPage,
+    EdituserPage,
+    EditrecipePage,
+    EditstepsPage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Recipeprovider,Userprovider,Ingredientprovide]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Recipeprovider,Userprovider,Ingredientprovide,Steps,Pinned,Authuser],
+  
 })
 export class AppModule {}
